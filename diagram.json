@@ -10,10 +10,12 @@
       "left": -169.2,
       "attrs": { "env": "micropython-20231227-v1.22.0" }
     },
-    { "type": "wokwi-servo", "id": "servo1", "top": -136.4, "left": 134.4, "attrs": {} },
-    { "type": "wokwi-servo", "id": "servo2", "top": -2, "left": 144, "attrs": {} },
-    { "type": "wokwi-servo", "id": "servo3", "top": 122.8, "left": 144, "attrs": {} },
-    { "type": "wokwi-servo", "id": "servo4", "top": 257.2, "left": 134.4, "attrs": {} }
+    { "type": "wokwi-servo", "id": "servo1", "top": -155.6, "left": 153.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": -59.6, "left": 153.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": 26.8, "left": 153.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 122.8, "left": 153.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo5", "top": 218.8, "left": 153.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo6", "top": 314.8, "left": 163.2, "attrs": {} }
   ],
   "connections": [
     [ "servo1:GND", "pico:GND.8", "black", [ "h0" ] ],
@@ -27,7 +29,13 @@
     [ "pico:3V3", "servo4:V+", "red", [ "h0" ] ],
     [ "pico:GP2", "servo2:PWM", "limegreen", [ "h0" ] ],
     [ "servo3:PWM", "pico:GP3", "gold", [ "h0" ] ],
-    [ "pico:GP4", "servo4:PWM", "violet", [ "h0" ] ]
+    [ "pico:GP4", "servo4:PWM", "violet", [ "h0" ] ],
+    [ "pico:GND.8", "servo5:GND", "black", [ "h0" ] ],
+    [ "pico:GND.8", "servo6:GND", "black", [ "h0" ] ],
+    [ "pico:3V3", "servo5:V+", "green", [ "h0" ] ],
+    [ "pico:3V3", "servo6:V+", "green", [ "h0" ] ],
+    [ "pico:GP5", "servo5:PWM", "green", [ "h0" ] ],
+    [ "pico:GP6", "servo6:PWM", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
